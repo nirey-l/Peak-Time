@@ -85,8 +85,8 @@ def get_integrated_analysis_final_ultra():
             if new_finds > 0:
                 print(f"   > {step+1}단계: 누계 {len(collected_dict)}개 (새 키워드 {new_finds}개 포착)")
 
-        # 최종 TOP 30 슬라이싱
-        final_list = [{"title": t, "google_volume": v} for t, v in collected_dict.items()][:30]
+        # 최종 TOP 25 슬라이싱
+        final_list = [{"title": t, "google_volume": v} for t, v in collected_dict.items()][:25]
         
         if not final_list:
             print(f"⚠️ {label}에서 데이터를 가져오지 못했습니다. (페이지 로딩 확인 필요)")
